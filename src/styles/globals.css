@@ -14,6 +14,11 @@
   --text-dim: #6b7280;
 }
 
+::placeholder {
+  color: var(--text-dim);
+  opacity: 0.4;
+}
+
 * { box-sizing: border-box; }
 
 body {

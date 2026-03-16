@@ -29,6 +29,11 @@ export const projectsCommand: Command = {
     {
       id: crypto.randomUUID(),
       type: "text",
+      content: "      ",
+    },
+    {
+      id: crypto.randomUUID(),
+      type: "text",
       content:
         "      stack   React & TailwindCSS(for the website) · Python · GitHub Actions · Docker · SerpAPI",
     },
@@ -51,7 +56,13 @@ export const projectsCommand: Command = {
     {
       id: crypto.randomUUID(),
       type: "text",
-      content: "      WhatWasThisFor is a simple chrome extension to let you attach reminders to certain tabs, so that when you visit the tab again you wil be reminded of why you wanted to visit that website in the first place.",
+      content:
+        "      WhatWasThisFor is a simple chrome extension to let you attach reminders to certain tabs, so that when you visit the tab again you wil be reminded of why you wanted to visit that website in the first place.",
+    },
+    {
+      id: crypto.randomUUID(),
+      type: "text",
+      content: "      ",
     },
     {
       id: crypto.randomUUID(),

@@ -18,7 +18,7 @@ export default function Terminal() {
 
   return (
     <div
-      className="w-full max-w-3xl min-h-screen flex flex-col cursor-text"
+      className="w-full min-h-screen flex flex-col cursor-text"
       onClick={focusInput}
     >
       {/* titlebar */}
@@ -60,7 +60,7 @@ export default function Terminal() {
                     : line.type === "error"
                       ? "#f87171"
                       : "var(--text)",
-              whiteSpace: "pre",
+              whiteSpace: "pre-wrap",
             }}
           >
             {line.type === "command" ? (
@@ -90,6 +90,7 @@ export default function Terminal() {
             autoFocus
             spellCheck={false}
             autoComplete="off"
+            placeholder="type 'help' for available commands..."
             className="flex-1 bg-transparent border-none outline-none font-mono text-sm caret-current"
             style={{ color: "var(--text)", caretColor: "var(--acc)" }}
           />
