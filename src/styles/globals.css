@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+:root {
+  --hue: 160; 
+  --acc: hsl(var(--hue), 75%, 55%);
+  --acc-dim: hsl(var(--hue), 50%, 30%);
+  --acc-glow: hsl(var(--hue), 75%, 55%, 0.15);
+  --acc-subtle: hsl(var(--hue), 40%, 12%);
+  --bg-primary: #0a0b0f;
+  --bg-secondary: #0f1117;
+  --bg-tertiary: #151820;
+  --border: hsl(var(--hue), 15%, 18%);
+  --text: #e8eaf0;
+  --text-dim: #6b7280;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--bg-primary);
+  color: var(--text);
+  font-family: 'Space Mono', monospace;
+}
