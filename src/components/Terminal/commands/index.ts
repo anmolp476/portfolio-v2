@@ -1,4 +1,4 @@
-import { Command, OutputLine } from "../../../types/terminal";
+import type { Command, OutputLine } from "../../../types/terminal";
 import { helpCommand } from "./help";
 import { aboutCommand } from "./about";
 import { projectsCommand } from "./projects";

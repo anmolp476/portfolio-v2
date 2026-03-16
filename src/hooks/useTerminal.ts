@@ -22,7 +22,6 @@ export function useTerminal() {
   const handleSubmit = useCallback(() => {
     const raw = inputValue.trim();
 
-    // always print the command the user typed
     const cmdLine: OutputLine = {
       id: crypto.randomUUID(),
       type: "command",
@@ -35,13 +34,18 @@ export function useTerminal() {
       return;
     }
 
-    // save to history
     setCommandHistory((prev) => [raw, ...prev]);
     setHistoryIndex(-1);
 
     const [cmd, ...args] = raw.split(" ");
-    const result = runCommand(cmd.toLowerCase(), args);
 
+    if (cmd.toLowerCase() === "clear") {
+      setOutput([]);
+      setInputValue("");
+      return;
+    }
+
+    const result = runCommand(cmd.toLowerCase(), args);
     pushLines([cmdLine, ...result]);
     setInputValue("");
   }, [inputValue, pushLines]);
